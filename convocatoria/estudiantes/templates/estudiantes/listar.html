@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Facultad</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante.id_estudiante }}</td>
+            <td>{{ estudiante.nombre }}</td>
+            <td>{{ estudiante.facultad }}</td>
+            <td>{{ estudiante.estado_convocatoria }}</td>
+            <td>
+                <a href="{% url 'procesar_convocatoria' estudiante.id_estudiante %}">Procesar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

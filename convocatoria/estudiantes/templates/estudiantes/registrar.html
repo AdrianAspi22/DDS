@@ -1,0 +1,10 @@
+<form method="post">
+    {% csrf_token %}
+    <label>ID del Estudiante:</label>
+    <input type="text" name="id_estudiante" required><br>
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required><br>
+    <label>Facultad:</label>
+    <input type="text" name="facultad" required><br>
+    <button type="submit">Registrar</button>
+</form>
